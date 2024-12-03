@@ -28,6 +28,9 @@
     "test": ""
   },
   "devDependencies": {
-    "parcel": "^2.13.0"
+    "parcel": "^2.13.2"
+  },
+  "dependencies": {
+    "build": "^0.1.4"
   }
 }
