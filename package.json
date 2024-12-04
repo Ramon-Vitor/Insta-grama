@@ -23,15 +23,17 @@
   },
   "contributors": [],
   "scripts": {
-    "start": "npx parcel serve dist/index.html --port 8000",
+    "start": "npx parcel --no-cache --port 8000 index.html",
     "dev": "npx parcel --no-cache --port 8000 index.html",
     "test": "",
-    "build": "parcel build index.html"
+    "build": "parcel build --no-cache index.html"
   },
   "devDependencies": {
+    "http-server": "^14.1.1",
     "parcel": "^2.13.2"
   },
   "dependencies": {
-    "build": "^0.1.4"
+    "build": "^0.1.4",
+    "dotenv": "^16.4.7"
   }
 }
