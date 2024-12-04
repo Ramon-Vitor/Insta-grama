@@ -1,4 +1,4 @@
-const API_URL = "https://insta-grama-780703529073.southamerica-east1.run.app/posts"
+let API_URL = "https://insta-grama-780703529073.southamerica-east1.run.app/posts"
 
 let { API_URL } = process.env;
 
