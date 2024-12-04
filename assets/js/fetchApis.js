@@ -1,3 +1,5 @@
+API_UTL = "https://insta-grama-780703529073.southamerica-east1.run.app/posts"
+
 let { API_URL } = process.env;
 
 // Função para buscar os dados do endpoint
