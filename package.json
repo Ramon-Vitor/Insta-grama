@@ -26,7 +26,7 @@
     "start": "npx parcel --no-cache --port 8000 index.html",
     "dev": "npx parcel --no-cache index.html",
     "test": "",
-    "build": "parcel build --port 8000 index.html"
+    "build": "parcel build index.html"
   },
   "devDependencies": {
     "parcel": "^2.13.2"
