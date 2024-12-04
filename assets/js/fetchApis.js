@@ -1,4 +1,7 @@
-let { API_URL } = process.env;
+
+import'dotenv/config';
+
+let API_URL = process.env;
 
 // Função para buscar os dados do endpoint
 export default async function fetchImages() {
@@ -8,5 +11,7 @@ export default async function fetchImages() {
     return data;
   } catch (error) {
     console.error("Erro ao buscar dados:", error);
+    console.log("Erro ao buscar dados:", error);
   }
 }
+
