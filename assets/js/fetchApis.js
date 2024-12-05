@@ -1,4 +1,4 @@
-fetch('https://insta-grama-api-780703529073.us-east1.run.app/posts', {
+fetch('https://insta-grama-api-780703529073.us-east1.run.app', {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json',
