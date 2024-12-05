@@ -1,5 +1,5 @@
 fetch('https://insta-grama-api-780703529073.us-east1.run.app/posts', {
-  method: 'OPTIONS, GET', // ou POST, PUT, DELETE dependendo do tipo de requisição
+  method: 'GET', // ou POST, PUT, DELETE dependendo do tipo de requisição
   headers: {
     'Content-Type': 'application/json',
     // Outros cabeçalhos se necessário
