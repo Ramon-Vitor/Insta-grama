@@ -7,10 +7,19 @@ fetch('https://insta-grama-api-780703529073.us-east1.run.app', {
 })
 
 fetch('https://insta-grama-api-780703529073.us-east1.run.app')
-  .then(response => response.json())
-  .then(data => processData(data))  // Certifique-se de que processData é uma função válida
-  .catch(error => console.error(error));
-someObject.someMethod().then(anotherMethod());
+  .then(response => {
+    console.log(response);
+    if (!response.ok) {
+      throw new Error('Erro na requisição');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Erro na requisição:', error);
+  });
 
 .then(response => {
   console.log(response);
