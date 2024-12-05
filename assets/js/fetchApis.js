@@ -6,6 +6,10 @@ fetch('https://insta-grama-api-780703529073.us-east1.run.app', {
   mode: 'no-cors'
 })
 
+fetch('https://insta-grama-api-780703529073.us-east1.run.app')
+  .then(response => response.json())
+  .then(data => processData(data))  // Certifique-se de que processData é uma função válida
+  .catch(error => console.error(error));
 someObject.someMethod().then(anotherMethod());
 
 .then(response => {
