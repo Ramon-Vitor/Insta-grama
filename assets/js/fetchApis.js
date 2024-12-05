@@ -8,12 +8,12 @@ fetch('https://insta-grama-api-780703529073.us-east1.run.app', {
 
 async function fetchImages() {
     try {
-        const response = await fetch('https://insta-grama-api-780703529073.us-east1.run.app');
+        const response = await fetch('https://insta-grama-api-780703529073.us-east1.run.app/posts');
         if (!response.ok) {
             throw new Error(`Erro na requisição: ${response.status} - ${response.statusText}`);
         }
-        const data = await response.json();
-        return data; // Retorna os dados recebidos
+        const data = await response.json(); // Lê a resposta como JSON
+        return data; // Retorna os dados
     } catch (error) {
         console.error('Erro ao buscar imagens:', error);
         return []; // Retorna um array vazio em caso de erro
