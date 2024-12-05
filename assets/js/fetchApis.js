@@ -1,7 +1,7 @@
 
 import'dotenv/config';
 
-let API_URL = process.env;
+let { API_URL } = process.env;
 
 // Função para buscar os dados do endpoint
 export default async function fetchImages() {
