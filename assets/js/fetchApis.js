@@ -23,14 +23,16 @@ fetch('https://insta-grama-api-780703529073.us-east1.run.app'){
 };
 async function fetchImages() {
     try {
-        const response = await fetch('https://insta-grama-api-780703529073.us-east1.run.app'); // URL da API
+        const response = await fetch('https://insta-grama-api-780703529073.us-east1.run.app');
         if (!response.ok) {
-            throw new Error('Erro na requisição');
+            throw new Error(`Erro na requisição: ${response.status} - ${response.statusText}`);
         }
         const data = await response.json();
-        return data; // Certifique-se de que a função retorna os dados
+        return data; // Retorna os dados recebidos
     } catch (error) {
-        console.error('Erro ao buscar as imagens:', error);
-        return []; // Retorne um array vazio ou um valor que o código possa manipular
+        console.error('Erro ao buscar imagens:', error);
+        return []; // Retorna um array vazio em caso de erro
     }
 }
+
+export default fetchImages;
