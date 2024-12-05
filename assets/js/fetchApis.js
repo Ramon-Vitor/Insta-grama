@@ -5,6 +5,9 @@ fetch('https://insta-grama-api-780703529073.us-east1.run.app', {
   },
   mode: 'no-cors'
 })
+
+someObject.someMethod().then(anotherMethod());
+
 .then(response => {
   console.log(response);
   if (!response.ok) {
