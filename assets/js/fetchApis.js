@@ -1,4 +1,4 @@
-const API_URL = 'https://insta-grama-api-780703529073.southamerica-east1.run.app/posts';
+const API_URL = 'https://insta-grama-api-780703529073.us-east1.run.app/posts';
 
 // Função para buscar os dados do endpoint
 export default async function fetchImages() {
