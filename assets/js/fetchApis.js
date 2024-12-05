@@ -3,8 +3,7 @@ fetch('https://insta-grama-api-780703529073.us-east1.run.app/posts', {
   headers: {
     'Content-Type': 'application/json',
     // Outros cabeçalhos se necessário
-  },
-  mode: 'cors'
+  }
 })
   .then(response => response.json())
   .then(data => {
