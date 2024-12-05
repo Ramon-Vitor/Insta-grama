@@ -10,29 +10,28 @@ const imageGrid = document.querySelector(".image-grid");
 
 // Função para buscar e exibir os dados do endpoint
 async function displayImages() {
-  try {
-      const data = await fetchImages(); // Verifique se `fetchImages` está retornando dados corretamente
-      if (!Array.isArray(data)) {
-          throw new Error("Dados recebidos não são um array");
-      }
-      const postsList = data.map(item => {
-        return `
-          <article data-description="${item.descricao}">
-            <figure>
-              <img src="${item.imgUrl}" alt="${item.alt}" />
-            </figure>
-          </article>
-        `;
-      }).join('');
-      imageGrid.insertAdjacentHTML('beforeend', postsList)
+    try {
+        const data = await fetchImages(); // Verifique se `fetchImages` está retornando dados corretamente
+        if (!Array.isArray(data)) {
+            throw new Error("Dados recebidos não são um array");
+        }
+        const postsList = data.map(item => {
+            return `
+                <article data-description="${item.descricao}">
+                    <figure>
+                        <img src="${item.imgUrl}" alt="${item.alt}" />
+                    </figure>
+                </article>
+            `;
+        }).join('');
+        imageGrid.insertAdjacentHTML('beforeend', postsList)
 
-      // Adicionando eventos de clique para cada imagem carregada
-      addImageClickEvents();
-  } catch (error) {
-      console.error("Erro ao popular página", error);
-  }
+        // Adicionando eventos de clique para cada imagem carregada
+        addImageClickEvents();
+    } catch (error) {
+        console.error("Erro ao popular página", error);
+    }
 }
-
 
 // Função para adicionar os eventos de clique às imagens
 function addImageClickEvents() {
