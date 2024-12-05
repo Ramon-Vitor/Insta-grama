@@ -1,4 +1,4 @@
-let API_URL = process.env.API_URL;
+const API_URL = 'https://insta-grama-api-780703529073.southamerica-east1.run.app/posts';
 
 // Função para buscar os dados do endpoint
 export default async function fetchImages() {
