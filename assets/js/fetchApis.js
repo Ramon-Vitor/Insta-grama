@@ -6,7 +6,7 @@ fetch('https://insta-grama-api-780703529073.us-east1.run.app', {
   mode: 'no-cors'
 })
 
-fetch('https://insta-grama-api-780703529073.us-east1.run.app')
+fetch('https://insta-grama-api-780703529073.us-east1.run.app'){
   .then(response => {
     console.log(response);
     if (!response.ok) {
@@ -19,7 +19,8 @@ fetch('https://insta-grama-api-780703529073.us-east1.run.app')
   })
   .catch(error => {
     console.error('Erro na requisição:', error);
-  });
+  })
+};
 
 .then(response => {
   console.log(response);
