@@ -8,7 +8,7 @@ fetch('https://insta-grama-api-780703529073.us-east1.run.app', {
 
 async function fetchImages() {
     try {
-        const response = await fetch('https://cors-anywhere.herokuapp.com/https://insta-grama-api-780703529073.us-east1.run.app/posts');
+        const response = await fetch('https://insta-grama-api-780703529073.us-east1.run.app/posts');
         if (!response.ok) {
             throw new Error(`Erro na requisição: ${response.status} - ${response.statusText}`);
         }
